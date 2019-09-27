@@ -2,12 +2,12 @@
 #esxi_serial: "XXXXX-XXXXX-XXXX-XXXXX-XXXXX"
 
 # host names are in fact ignored by esxi; better use ip here
-esxi_local_users:
-  "alex":
-    desc: "Alexey Vekshin"
-    pubkeys:
-      - name:  "alex-mp"
-        hosts: "10.1.11.6,alex-mp.m1.maxidom.ru"
+# esxi_local_users:
+#   "alex":
+#     desc: "Alexey Vekshin"
+#     pubkeys:
+#       - name: "alex-mp"
+#         hosts: "10.1.11.6,alex-mp.m1.maxidom.ru"
 
 # same default port groups for all for now
 # for multiple vSwitches: either add 2nd record field or keep separate var for
@@ -18,13 +18,10 @@ esxi_local_users:
 esxi_portgroups:
   # bare minimum
   "vMotion":
-    tag: 241
-  "all-tagged":
-    tag: 4095
-  "adm-srv":
-    tag: 210
-
+    tag: 1208
+  "vsphere-mgmt":
+    tag: 1211
 # install host client
-vib_list:
-  - name: esx-ui
-    url: "http://www-distr.m1.maxidom.ru/suse_distr/iso/esxui-signed-6360286.vib"
+# vib_list:
+#   - name: esx-ui
+#     url: "http://www-distr.m1.maxidom.ru/suse_distr/iso/esxui-signed-6360286.vib"

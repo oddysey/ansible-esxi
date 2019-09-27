@@ -12,8 +12,8 @@
 
 # all hosts: include sites here
 [all.esxi:children]
-all-m0
+all-hq-5guys    172.23.27.[101:105]
 
 # one site with specific vars in group_vars
 [all-m0]
-cage     ansible_host=cage.m0.maxidom.ru
+cage     ansible_host=localhost

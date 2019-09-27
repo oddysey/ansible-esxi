@@ -1,0 +1,34 @@
+---
+# vars for FiveGuys.local
+dns_domain: "fiveguys.local"
+name_servers:
+  - 172.22.200.142
+  - 10.10.7.99
+
+ntp_servers:
+  - 172.22.200.142
+  - 10.10.7.99
+
+esxi_portgroups:
+  # bare minimum
+  "vMotion":
+    tag: 1208
+  "vsphere-mgmt":
+    tag: 1211
+  "iSCSI-A":
+    tag: 1209
+  "iSCSI-B":
+    tag: 1210
+
+# vms_to_autostart:
+#   eagle-m0:
+#     order: 1
+#   hawk-m0:
+#     order: 2
+#   falcon-m0:
+
+# autostart only listed VMs
+#autostart_only_listed: true
+
+# really ok with defaults: "log." + dns_domain
+syslog_host: hq-vcenter-01.fiveguys.local

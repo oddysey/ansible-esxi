@@ -9,7 +9,7 @@
 ssh_timeout: 3600
 
 # mostly ok: dns_domain is overriden per-group
-syslog_host: "log.{{ dns_domain }}"
+syslog_host: "hq-vcenter-01.{{ dns_domain }}"
 
 # filesystem names: 1st is "hostname-sys" by default
 local_datastores: {}
@@ -22,7 +22,7 @@ rename_datastores: true
 create_datastores: true
 
 # add those hosts to permitted host lists for forwarded keys
-permit_ssh_from: 192.168.0.*
+permit_ssh_from: 0.0.0.0/0
 
 # disable autostart for VMs not in autostart list
 autostart_only_listed: false
@@ -31,7 +31,7 @@ autostart_only_listed: false
 vswitch_def: vSwitch0
 
 # vmotion iface: vmotion IP is <same-as-vmk0>.<same-as-vmk0>.<vmotion_subnet>.<same-as-vmk0>
-create_vmotion_iface: false
+create_vmotion_iface: true
 vmotion_iface_name: vmk1
 vmotion_portgroup_name: vMotion
-vmotion_subnet_number: 241
+vmotion_subnet_number: 1208
